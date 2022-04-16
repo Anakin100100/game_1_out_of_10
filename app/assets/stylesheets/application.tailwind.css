@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.red_dot {
+    height: 48px;
+    width: 48px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+.green_dot {
+    height: 48px;
+    width: 48px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+}

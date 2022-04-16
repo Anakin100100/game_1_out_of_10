@@ -1,0 +1,60 @@
+<div class="bg-orange-400 w-screen h-screen flex items-center justify-center flex-col" id="viewing_page_body">
+    <%= form_with url: update_game_state_path do |form| %>
+        <div class="flex justify-center items-center">
+            <div class="flex">
+                <p class="font-semibold">Zostało  <%= form.text_field :number_of_questions_left, :value => @game.number_of_questions_left %> pytań</p>
+            </div>
+        </div>
+        <div class="flex flex-row space-x-4 mt-16">
+            <div class="flex flex-col justify-center items-center bg-green-400 p-4 border-4 rounded-lg border-gray-500">
+                <div class="flex">
+                    <p class=" font-semibold">Klasa 3A</p>
+                </div>
+                <div class="flex mt-4">
+                    <p class=" font-semibold">Punkty: <%= form.text_field :score_3a, :value => @game.score_3a %></p>
+                </div>
+                <div class="flex mt-4">
+                    <p class=" font-semibold">Szanse: <%= form.text_field :chances_3a, :value => @game.chances_3a %> </p>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center items-center bg-green-400 p-4 border-4 rounded-lg border-gray-500">
+                <div class="flex">
+                    <p class=" font-semibold">Klasa 3B</p>
+                </div>
+                <div class="flex mt-4">
+                    <p class=" font-semibold">Punkty: <%= form.text_field :score_3b, :value => @game.score_3b %></p>
+                </div>
+                <div class="flex mt-4">
+                    <p class=" font-semibold">Szanse: <%= form.text_field :chances_3b, :value => @game.chances_3b %> </p>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center items-center bg-green-400 p-4 border-4 rounded-lg border-gray-500">
+                <div class="flex">
+                    <p class=" font-semibold">Klasa 3C</p>
+                </div>
+                <div class="flex mt-4">
+                    <p class=" font-semibold">Punkty: <%= form.text_field :score_3c, :value => @game.score_3c %></p>
+                </div>
+                <div class="flex mt-4">
+                    <p class=" font-semibold">Szanse: <%= form.text_field :chances_3c, :value => @game.chances_3c %> </p>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center items-center bg-green-400 p-4 border-4 rounded-lg border-gray-500">
+                <div class="flex">
+                    <p class=" font-semibold">Klasa 3D</p>
+                </div>
+                <div class="flex mt-4">
+                    <p class=" font-semibold">Punkty: <%= form.text_field :score_3d, :value => @game.score_3d %></p>
+                </div>
+                <div class="flex mt-4">
+                    <p class=" font-semibold">Szanse: <%= form.text_field :chances_3d, :value => @game.chances_3d %> </p>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center items-center">
+            <div class="flex text-2xl bg-emerald-700 rounded-md p-2 mt-4">
+                <%= form.submit %>
+            </div>
+        </div>
+    <% end %>
+</div>

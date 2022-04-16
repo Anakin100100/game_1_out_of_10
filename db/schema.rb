@@ -10,6 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2022_04_15_160234) do
+
+  create_table "games", force: :cascade do |t|
+    t.integer "score_3a", default: 0
+    t.integer "score_3b", default: 0
+    t.integer "score_3c", default: 0
+    t.integer "score_3d", default: 0
+    t.integer "chances_3a", default: 3
+    t.integer "chances_3b", default: 3
+    t.integer "chances_3c", default: 3
+    t.integer "chances_3d", default: 3
+    t.integer "number_of_questions_left", default: 40
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end
