@@ -6,5 +6,13 @@ module.exports = {
   ],
   plugins: [
     require('@tailwindcss/typography'),
-  ]
+  ],
+  theme: {
+    extend: {
+      colors: {
+        'silver': '#C0C0C0',
+        'gold': '#FFD700'
+      }
+    }
+  }
 }
