@@ -4,9 +4,5 @@
 
 import { application } from "./application"
 
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
-
-import consumer from '../channels/consumer'
-application.consumer = consumer
-
+import SoundController from "./sound_controller.js"
+application.register("sound", SoundController)
