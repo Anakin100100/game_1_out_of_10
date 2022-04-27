@@ -1,3 +1,7 @@
+require 'puma/daemon'
+
+daemonize
+
 # Puma can serve each request in a thread from an internal thread pool.
 # The `threads` method setting takes two numbers: a minimum and maximum.
 # Any libraries that use thread pools should be configured to match
@@ -37,6 +41,9 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 # before forking the application. This takes advantage of Copy On Write
 # process behavior so workers use less memory.
 #
+workers 3
+threads 2,3
+
 # preload_app!
 
 # Allow puma to be restarted by `bin/rails restart` command.
